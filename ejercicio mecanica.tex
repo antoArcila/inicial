@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[spanish]{babel}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[vmargin=2cm,hmargin=2cm]{geometry}
+\title{Problema extra: mecánica}
+\author{Antonio Arcila}
+\date{mayo, 2017}
+\begin{document}
+	\maketitle
+	\paragraph{Apartado a)}
+	Considerando el lagrangiano: \[L(q,\dot{q},t)=\frac{1}{2}m\dot{q}^{2}e^{2\gamma t}-\frac{1}{2}k^{2}q^{2}e^{2\gamma t}\] tal que $\gamma > 0$, queremos hallar en primer lugar las ecuaciones de movimiento que se obtienen a partir de ese lagrangiano. Sabemos que en general, estas son de la forma: \[\frac{d}{dt}[\frac{\partial L}{\partial \dot{q_{\alpha}}}]-\frac{\partial L}{\partial q_{\alpha}}=0\]. En nuestro caso tenemos que $q_{\alpha}=\{q\}$, $\dot{q_{\alpha}}=\{\dot{q}\}$, y por tanto: 
+	\[\rightarrow \frac{\partial L}{\partial\dot{q}}=\frac{1}{2}me^{2\gamma t}2\dot{q} = me^{2\gamma t}\dot{q}\]
+	\[\rightarrow \frac{d}{dt}[\frac{\partial L}{\partial \dot{q}}] = m[e^{2\gamma t}2\gamma \dot{q}+e^{2\gamma t}\ddot{q}] = me^{2\gamma t}[2\gamma \dot{q}+\ddot{q}]
+	\]
+	\[\rightarrow \frac{\partial L}{\partial q} = -k^{2}e^{2\gamma t}\frac{1}{2}2q = -k^{2}e^{2\gamma t}q
+	\]
+	Por tanto la ecuación de movimiento nos queda como:
+	\[me^{2\gamma t}[2\gamma\dot{q}+\ddot{q}]+k^{2}e^{2\gamma t}q = 0
+	\]
+	\paragraph{Apartado b)} Para determinar el hamiltoniano, determinamos en primer lugar el momento conjugado $\frac{\partial L}{\partial \dot{q}} = me^{2\gamma t}\dot{q}$ y tomamos este como la variable $p\colon = me^{2\gamma t}\dot{q}$. Entonces el hamiltoniano sería: \[ H = me^{2\gamma t}\dot{q}^{2}-\frac{1}{2}m\dot{q}^{2}e^{2\gamma t}+\frac{1}{2}k^{2}q^{2}e^{2\gamma t}
+	\]
+	Pero nuestro objetivo es tener la expresión del hamiltoniano sin derivadas de la coordenada generalizada, por tanto usamos la definición que hemos dado de $p$ para sustituir:
+	\[\dot{q}=\frac{p}{me^{2\gamma t}} \Longrightarrow 
+	\]
+	\[\Longrightarrow H = me^{2\gamma t}(\frac{p}{me^{2\gamma t}})^{2}-\frac{1}{2}m(\frac{p}{me^{2\gamma t}})^{2}+\frac{1}{2}k^{2}q^{2}e^{2\gamma t} = \\ \frac{p^{2}}{me^{2\gamma t}}-\frac{1}{2}\frac{p^{2}}{me^{2\gamma t}}+\frac{1}{2}k^{2}q^{2}e^{2\gamma t} = \frac{1}{2}\frac{p^{2}}{me^{2\gamma t}}+\frac{1}{2}k^{2}q^{2}e^{2\gamma t}
+	\]
+	Podemos comprobar que:
+	\[\frac{\partial H}{\partial p} = \frac{p}{me^{2\gamma t}} = \dot{q}
+	\]
+	\[\frac{\partial H}{\partial q} = k^{2}qe^{2\gamma t}
+	\]
+	Y tiene que cumplirse $\frac{\partial H}{\partial q} = -\dot{p}$, por tanto igualamos:
+	\[-\dot{p}= \begin{cases}
+	k^{2}qe^{2\gamma t}\\
+	-m(\ddot{q}e^{2\gamma t}+\dot{q}e^{2\gamma t}2\gamma)
+	\end{cases}
+	\Longrightarrow 	k^{2}qe^{2\gamma t}+m(\ddot{q}e^{2\gamma t}+\dot{q}e^{2\gamma t}2\gamma)=0 \Longleftrightarrow e^{2\gamma t}[k^{2}q+m(\ddot{q}+2\gamma)]=0
+	\]
+	Así, nos queda:\[k^{2}q+m(\ddot{q}+2\gamma\dot{q})=0\].
+	
+\end{document}
